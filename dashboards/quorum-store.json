@@ -128,15 +128,15 @@
       "id": 166,
       "isNew": false,
       "span": 0,
-      "title": "PULLED_LEFTOVER_TXNS_COUNT",
-      "description": "Count of the pulled leftover txns.",
+      "title": "EXCEEDED_STORAGE_QUOTA_COUNT",
+      "description": "Count of the exceeded storage quota.",
       "transparent": false,
       "type": "timeseries",
       "targets": [
         {
           "refId": "A",
           "datasource": { "type": "prometheus", "uid": "PCD0403638111AF12" },
-          "expr": "rate(quorum_store_pulled_leftover_txn_count[$__rate_interval])",
+          "expr": "rate(quorum_store_exceeded_storage_quota_count[$__rate_interval])",
           "legendFormat": "__auto"
         }
       ],
@@ -944,7 +944,7 @@
   },
   "refresh": false,
   "schemaVersion": 37,
-  "version": 9,
+  "version": 10,
   "links": [],
   "time": { "from": "now-3h", "to": "now" },
   "timepicker": { "refresh_intervals": null, "time_options": null }
